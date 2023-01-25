@@ -4,7 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css/style.css" />
+    <link rel="icon" href="img/Tap_icon-removebg-preview.png" />
     <title>Freedom</title>
   </head>
-  <body></body>
+  <body>
+    <main id="freedom">
+      <div class="grid-box"><h2 id="clock">00:00:00</h2></div>
+      <div class="grid-box"></div>
+      <div class="grid-box">
+        <form id="todo-form">
+          <input
+            type="text"
+            placeholder="Write a To Do and Press Enter"
+            required
+          />
+        </form>
+      </div>
+      <div class="grid-box">4</div>
+
+      <div class="grid-box">
+        <form class="hidden" id="signin-form">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+          />
+          <input type="submit" value="Sign In" />
+        </form>
+
+        <h1 class="hidden" id="greeting"></h1>
+      </div>
+
+      <div class="grid-box">
+        <ul id="todo-list"></ul>
+      </div>
+      <div class="grid-box">7</div>
+      <div class="grid-box">
+        <div id="quote">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="grid-box">
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </main>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/star.js"></script>
+  </body>
 </html>
