@@ -1,3 +1,22 @@
+class Clock {
+  constructor(elementId) {
+    this.clock = document.querySelector(`h2#${elementId}`);
+  }
+
+  getClock() {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    this.clock.innerText = `${hours}:${minutes}:${seconds}`;
+  }
+
+  start() {
+    this.getClock();
+    setInterval(this.getClock.bind(this), 1000);
+  }
+}
+
 class Signin {
   constructor() {
     this.signinForm = document.querySelector("#signin-form");
@@ -25,9 +44,21 @@ class Signin {
   }
 
   paintGreetings(username) {
-    this.greeting.innerText = `Good Morning, ${username}`;
+    const hours = Number(myClock.clock.innerText.split(":")[0]);
+    if (hours >= 12 && hours < 17) {
+      this.greeting.innerText = `Good Afternoon, ${username}`;
+    } else if (hours >= 17 && hours < 22) {
+      this.greeting.innerText = `Good Evening, ${username}`;
+    } else if (hours >= 22 && hours < 6) {
+      this.greeting.innerText = `Good Night, ${username}`;
+    } else {
+      this.greeting.innerText = `Good Morning, ${username}`;
+    }
     this.greeting.classList.remove(this.HIDDEN_CLASSNAME);
   }
 }
+
+const myClock = new Clock("clock");
+myClock.start();
 
 const signin = new Signin();

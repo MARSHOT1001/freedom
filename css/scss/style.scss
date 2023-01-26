@@ -18,7 +18,7 @@ body {
   width: 100vw;
   background: url("/img/WallpapersOnlyMars-removebg-preview.png") no-repeat
     center;
-  background-color: black;
+  background-color: #19110f;
   background-size: cover;
   z-index: 0;
   color: white;
@@ -29,14 +29,28 @@ body {
 }
 
 #freedom {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  width: 100%;
+  @include freedom();
 }
 
 .grid-box {
+  @include flexCenter();
+}
+
+.starlight {
+  @include star();
+}
+
+.sidebar {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  height: 90%;
+  width: 90%;
+  border-radius: 30px;
+  background-color: grey;
+  opacity: 0.8;
+  & #create-folder {
+    margin-top: 10px;
+    border-radius: 10px;
+  }
 }

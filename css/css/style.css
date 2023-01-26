@@ -133,6 +133,20 @@ table {
   border-spacing: 0;
 }
 
+@keyframes starlight {
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -145,7 +159,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: url("/img/WallpapersOnlyMars-removebg-preview.png") no-repeat center;
-  background-color: black;
+  background-color: #19110f;
   background-size: cover;
   z-index: 0;
   color: white;
@@ -159,13 +173,58 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 100%;
+  grid-template-areas: "folder clock todo" "folder signin list" "folder quote weather";
+}
+#freedom .area-folder {
+  grid-area: folder;
+}
+#freedom .area-clock {
+  grid-area: clock;
+}
+#freedom .area-todo-form {
+  grid-area: todo;
+}
+#freedom .area-signin {
+  grid-area: signin;
+}
+#freedom .area-todo-list {
+  grid-area: list;
+}
+#freedom .area-quote {
+  grid-area: quote;
+}
+#freedom .area-weather {
+  grid-area: weather;
 }
 
 .grid-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.starlight {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: absolute;
+  animation: starlight 10s linear;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  border-radius: 30px;
+  background-color: grey;
+  opacity: 0.8;
+}
+.sidebar #create-folder {
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

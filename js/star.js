@@ -1,70 +1,52 @@
-class StarLight {
-  constructor() {
-    this.body = document.querySelector("body");
-    this.appearInterval = 100;
-    this.disappearInterval = 1000;
-    this.disappearDuration = 2;
-  }
+class Starlight {
+  static starColor = [
+    "#C77AA4",
+    "#5572AB",
+    "#D2F0FF",
+    "#949EAA",
+    "#AE673B",
+    "#E2EDF4",
+  ];
 
-  createStar() {
-    const star = document.createElement("div");
-    star.style.height = "8px";
-    star.style.width = "8px";
-    star.style.position = "absolute";
-    star.style.top = `${Math.random() * 90}%`;
-    star.style.left = `${Math.random() * 90}%`;
-    star.style.backgroundColor = "#fff58c";
-    star.style.borderRadius = "50%";
-    this.body.appendChild(star);
+  MIN_DURATION = 3;
+  body = document.querySelector("body");
+
+  create() {
+    const starlight = document.createElement("div");
+    const initialOpacity = Math.random();
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 20 + this.MIN_DURATION;
+
+    starlight.classList.add("starlight");
+    starlight.style.left = `${Math.random() * 90}%`;
+    starlight.style.top = `${Math.random() * 90}%`;
+    starlight.style.animationDelay = `${delay}s`;
+    starlight.style.opacity = initialOpacity;
+    starlight.style.animation = `starlight ${duration}s ease-in-out`;
+    starlight.style.backgroundColor = `${
+      Starlight.starColor[
+        Math.floor(Math.random() * Starlight.starColor.length)
+      ]
+    }`;
+    starlight.style.boxShadow = `0px 0px 10px ${
+      Starlight.starColor[
+        Math.floor(Math.random() * Starlight.starColor.length)
+      ]
+    }`;
+    this.body.appendChild(starlight);
+
     setTimeout(() => {
-      this.body.removeChild(star);
-    }, this.disappearInterval);
+      this.body.removeChild(starlight);
+      this.create();
+    }, (duration + delay) * 1000);
   }
 
   start() {
-    setInterval(() => {
-      this.createStar();
-    }, this.appearInterval);
+    for (let index = 0; index < 50; index++) {
+      setTimeout(() => this.create(), 500 * index);
+    }
   }
 }
 
-const star = new StarLight();
-star.start();
-
-// class Star {
-//   constructor() {
-//     this.appearInterval = 1000; // Interval for star to appear (in milliseconds)
-//     this.disappearInterval = 2000; // Interval for star to disappear (in milliseconds)
-//     this.fadeDuration = 2; // Duration for star to fade in/out (in seconds)
-//     this.body = document.querySelector("body");
-//   }
-
-//   createStar() {
-//     const star = document.createElement("div");
-//     star.style.height = "8px";
-//     star.style.width = "8px";
-//     star.style.position = "absolute";
-//     star.style.top = `${Math.random() * 100}%`;
-//     star.style.left = `${Math.random() * 100}%`;
-//     star.style.backgroundColor = "white";
-//     star.style.borderRadius = "50%";
-//     star.style.transition = `opacity ${this.fadeDuration}s`;
-//     star.style.opacity = 0;
-//     this.body.appendChild(star);
-//     setTimeout(() => {
-//       star.style.opacity = 1;
-//       setTimeout(() => {
-//         star.style.opacity = 0;
-//         setTimeout(() => {
-//           this.body.removeChild(star);
-//         }, this.fadeDuration * 1000);
-//       }, this.disappearInterval);
-//     }, this.fadeDuration * 1000);
-//   }
-
-//   start() {
-//     setInterval(() => {
-//       this.createStar();
-//     }, this.appearInterval);
-//   }
-// }
+const starlight = new Starlight();
+starlight.start();
