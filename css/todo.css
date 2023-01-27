@@ -7,7 +7,7 @@
 #todo-form input {
   background-color: #19110f;
   height: 50px;
-  width: 300px;
+  width: 90%;
   border-radius: 10px;
   text-align: center;
   font-size: 20px;
@@ -34,9 +34,8 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  width: 60%;
+  width: 90%;
   margin: 5px;
-  padding: 0px 30px;
   border-radius: 10px;
   background-color: grey;
   opacity: 0.7;
