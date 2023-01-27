@@ -10,7 +10,15 @@ function saveFoldernames() {
   localStorage.setItem(FOLDERNAME_KEY, JSON.stringify(folders));
 }
 
-function paintFolders(newFolder) {
+function deleteToDo(event) {
+  const folder = event.target.parentElement;
+  folder.remove();
+  folders = folders.filter(
+    (folderItem) => folderItem.id !== parseInt(folder.id)
+  );
+}
+
+function paintItems(newFolder) {
   const folder = document.createElement("folder");
   folder.id = newFolder.id;
   const span = document.createElement("span");
