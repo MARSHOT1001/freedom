@@ -4,28 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/Tap_icon-removebg-preview.png" />
     <title>Freedom</title>
   </head>
   <body>
     <main id="freedom">
-      <div class="grid-box area-folder">
-        <div class="sidebar">
-          <form id="folder-form">
-            <input
-              id="folder-input"
-              type="text"
-              placeholder="Write a folder's name"
-            />
-          </form>
-          <ul id="folder-list"></ul>
-        </div>
-      </div>
+      <div class="grid-box area-folder"></div>
 
-      <div class="grid-box area-clock">
-        <h2 id="clock">00:00:00</h2>
-      </div>
+      <div class="grid-box area-music"></div>
       <div class="grid-box area-todo-form">
         <form id="todo-form">
           <input
@@ -38,6 +25,7 @@
       <div class="grid-box"></div>
 
       <div class="grid-box area-signin">
+        <h2 id="clock">00:00:00</h2>
         <form class="hidden" id="signin-form">
           <input
             required
@@ -67,12 +55,12 @@
         </div>
       </div>
     </main>
-    <script src="js/folder.js"></script>
+    <script src="js/sidebar.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-    <script src="js/star.js"></script>
+    <script src="js/starlights.js"></script>
     <script
       src="https://kit.fontawesome.com/4ad1008042.js"
       crossorigin="anonymous"

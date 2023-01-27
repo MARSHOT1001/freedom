@@ -1,0 +1,38 @@
+#freedom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  grid-template-areas:
+    "folder music todo-list"
+    "folder signin todo"
+    "folder quote weather";
+}
+
+.area-music {
+  grid-area: music;
+}
+
+.area-folder {
+  grid-area: folder;
+}
+
+.area-todo-form {
+  grid-area: todo-list;
+}
+
+.area-signin {
+  grid-area: signin;
+}
+
+.area-todo-list {
+  grid-area: todo;
+}
+
+.area-quote {
+  grid-area: quote;
+}
+
+.area-weather {
+  grid-area: weather;
+}

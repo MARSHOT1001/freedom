@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed&family=Source+Sans+Pro&display=swap");
+@import "reset.css";
+@import "starlights.css";
+@import "grid.css";
+@import "greetings.css";
+@import "todo.css";
+@import "quotes.css";
+
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #19110f;
+  background-image: url("../img/WallpapersOnlyMars-removebg-preview.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+}
+
+.grid-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+#signin-form {
+  margin-top: 30px;
+}
+
+#signin-form input {
+  display: block;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  height: 50px;
+  width: 300px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#signin-form input:nth-child(1) {
+  text-align: center;
+  cursor: text;
+}
+
+#signin-form input:nth-child(1)::placeholder {
+  color: white;
+}
+
+#signin-form input:nth-child(1):focus {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: border-bottom 0.2s ease-in-out;
+}

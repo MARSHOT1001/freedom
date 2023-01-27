@@ -1,0 +1,39 @@
+.starlight {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@keyframes starlight {
+  10% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

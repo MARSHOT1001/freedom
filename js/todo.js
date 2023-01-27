@@ -25,8 +25,8 @@ class ToDoApp {
     li.id = newTodo.id;
     const span = document.createElement("span");
     span.innerText = newTodo.text;
-    const button = document.createElement("button");
-    button.innerText = "❌";
+    const button = document.createElement("i");
+    button.classList.add("fas", "fa-times");
     button.addEventListener("click", this.deleteToDo.bind(this));
     li.appendChild(span);
     li.appendChild(button);

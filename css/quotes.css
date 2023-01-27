@@ -1,0 +1,16 @@
+@import "greetings.css";
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+}
+
+#quote span {
+  margin: 10px 0px;
+}
