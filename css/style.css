@@ -12,8 +12,6 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
   height: 100vh;
   width: 100%;
   background-color: #19110f;
@@ -23,10 +21,22 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.grid-box {
+.folder-container {
+  justify-content: flex-start;
+}
+
+.folder-container__header,
+.folder-container__content {
   display: flex;
+  width: 100%;
+}
+
+.folder-container__header {
+  justify-content: space-between;
+  height: 10%;
+}
+
+.folder-container__content {
+  height: 90%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 20px;
 }

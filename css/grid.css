@@ -6,6 +6,10 @@
     "folder music todo-list"
     "folder signin todo"
     "folder quote weather";
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .area-music {
@@ -34,4 +38,13 @@
 
 .area-weather {
   grid-area: weather;
+}
+
+.grid-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
