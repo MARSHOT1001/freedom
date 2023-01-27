@@ -1,11 +1,11 @@
-const sidebar = document.querySelector(".sidebar");
-const folder = document.getElementById("create-folder");
+const folderForm = document.getElementById("folder-form");
+const folderInput = folderForm.querySelector("#folder-form input");
+const folderList = document.getElementById("#folder-list");
 
-const FOLDERNAME_KEY = "Create a Folder";
+const FOLDERNAME_KEY = "folders";
 
-function folderCreator(event) {
-  event.preventDefault();
-  const foldername = folder.value;
-  localStorage.setItem(FOLDERNAME_KEY, foldername);
-  paintGreetings(foldername);
+let folders = [];
+
+function saveFoldernames() {
+  localStorage.setItem(FOLDERNAME_KEY, JSON.stringify(folders));
 }
