@@ -12,9 +12,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 100vh;
   width: 100%;
   background-color: #19110f;
@@ -25,21 +22,42 @@ body {
 }
 
 .folder-container {
-  justify-content: flex-start;
-}
-
-.folder-container__header,
-.folder-container__content {
   display: flex;
-  width: 100%;
-}
-
-.folder-container__header {
-  justify-content: space-between;
-  height: 10%;
-}
-
-.folder-container__content {
-  height: 90%;
   flex-direction: column;
+}
+
+.folder {
+  display: flex;
+  height: 30%;
+  width: 50%;
+  background-color: grey;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 10px 0px;
+}
+
+.fav-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.fav-form input {
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  text-align: center;
+  background: transparent;
+}
+
+.fav-form input:focus {
+  border-bottom: 1px solid white;
+}
+
+.fav-form input::placeholder {
+  color: white;
 }

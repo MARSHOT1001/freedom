@@ -7,10 +7,10 @@
 #todo-form input {
   background-color: #19110f;
   height: 50px;
-  width: 300px;
+  width: 100%;
   border-radius: 10px;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   color: grey;
   border: none;
   outline: 2px solid grey;
@@ -34,9 +34,9 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  width: 300px;
+  width: 100%;
   margin: 5px;
-  padding: 0px 30px;
+  padding: 0px 10px;
   border-radius: 10px;
   background-color: grey;
   opacity: 0.7;
