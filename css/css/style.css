@@ -205,8 +205,8 @@ body {
 }
 
 .starlight {
-  height: 8px;
-  width: 8px;
+  height: 5px;
+  width: 5px;
   border-radius: 50%;
   position: absolute;
   animation: starlight 10s linear;
@@ -222,9 +222,11 @@ body {
   background-color: grey;
   opacity: 0.8;
 }
-.sidebar #create-folder {
-  margin-top: 10px;
-  border-radius: 10px;
+
+.folder {
+  height: 100px;
+  width: 100px;
+  background-color: #19110f;
 }
 
 /*# sourceMappingURL=style.css.map */

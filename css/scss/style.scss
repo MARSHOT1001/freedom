@@ -49,8 +49,10 @@ body {
   border-radius: 30px;
   background-color: grey;
   opacity: 0.8;
-  & #create-folder {
-    margin-top: 10px;
-    border-radius: 10px;
-  }
+}
+
+.folder {
+  height: 100px;
+  width: 100px;
+  background-color: #19110f;
 }
