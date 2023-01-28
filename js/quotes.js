@@ -14,102 +14,146 @@ class Quotes {
 
 const quotes = new Quotes([
   {
-    quote:
-      "if you gaze long enough into an abyss, the abyss will gaze back into you.",
-    author: "Beyond Good and Evil, Friedrich Nietzsche(1844 ~ 1900)",
+    quote: "심연을 바라보면, 그 심연도 우리를 바라볼 것이다.",
+    author: "선악의 저편, 프리드리히 니체 (1844 ~ 1900)",
   },
   {
-    quote: "It is possible for ordinary people to choose to be extraordinay.",
-    author: "Elon Musk (1971 ~)",
+    quote: "평범한 사람이 비범을 바라는 것은 충분히 가능한 일이다.",
+    author: "일론 머스크 (1971 ~)",
   },
   {
-    quote: "Power comes not from knowledge kept but from knowledge shared.",
-    author: "Bill Gates (1955 ~)",
+    quote: "진정한 힘은 지식이 아닌 지식 공유에서 나온다.",
+    author: "빌 게이츠 (1955 ~)",
   },
   {
-    quote: "there is some good in this world, and it's worth fighting for.",
-    author: "The lord of the rings:The two towers, Samwise Gamgee",
-  },
-  {
-    quote:
-      "Cowards never start. The weak never finish and the winners never quit.",
-    author: "Iron man, Tony Stark (1970 ~ 2023)",
+    quote: "세상에 아직 선이 남아있다는것, 그리고 그것은 싸울 가치가 있죠.",
+    author: "반지의 제왕: 두 개의 탑, 샘와이즈 갬지",
   },
   {
     quote:
-      "Until you make the unconscious conscious, it will direct your life, and you will call it fate.",
-    author: "Carl Jung (1875 ~ 1961)",
+      "겁쟁이는 시작을, 나약한 자는 끝내는 것을, 강한자는 멈추는 짓을 하지 않는다.",
+    author: "아이언 맨, 토니 스타크 (1970 ~ 2023)",
   },
   {
     quote:
-      "The man who asks a question is a fool for a minute, the man who does not ask is a fool for life.",
-    author: "Confucius (B.C 551 ~ 479)",
+      "무의식을 의식할 때까지, 그것은 삶을 조종하고, 사람들은 그것을 '운명'이라고 부른다.",
+    author: "카를 융 (1875 ~ 1961)",
   },
   {
     quote:
-      "In politics, nothing happens by accident. if it happens, you can bet it was planned that way.",
-    author: "Franklin D. Roosevelt (1882 ~ 1945)",
+      "질문하는 자는 그 순간 바보가 되지만, 질문하지 않는 자는 평생 바보가 되리라.",
+    author: "공자 (B.C 551 ~ 479)",
   },
   {
     quote:
-      "Impossible just means there are difficult and complicated problems. It's literally not impossible.",
-    author: "Somebody",
+      "정치에서 결코 우연은 없다. 모두 철저히 계획된 일이라고 확신해도 좋다.",
+    author: "프랭클린 D. 루즈벨트 (1882 ~ 1945)",
+  },
+  {
+    quote: "불가능은 단지 복잡하고 어려운 일이 있다는 뜻이다. 불가능이 아니라.",
+    author: "MARSHOT",
   },
   {
     quote:
-      "Your time is limited, so don't waste it living someone else's life.",
-    author: "Steve Jobs (1955 ~ 2011)",
+      "당신의 삶은 유한하다. 그러니 남의 인생을 위해 시간을 허비하지 말라.",
+    author: "스티브 잡스 (1955 ~ 2011)",
   },
   {
-    quote: "Stand up straight with your shoulders back.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "어깨를 펴고 똑바로 서라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "당신 자신을 도와주어야 할 사람으로 대하라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "당신에게 최고의 모습을 기대하는 사람만 만나라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "당신을 다른 사람과 비교하지 말고, 오직 어제의 당신하고만 비교하라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "아이를 제대로 키우고 싶다면 처벌을 망설이거나 피하지 말라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "세상을 탓하기 전에 방부터 정리하라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "쉬운 길이 아니라 의미 있는 길을 선택하라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "언제나 진실만을 말하라, 적어도 거짓말은 하지 말라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
   },
   {
     quote:
-      "Treat yourself like you are someone you are responsible for helping.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+      "다른 사람이 말할 떄는 당신이 꼭 알아야 할 것을 들려줄 사람이라고 생각하라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Make friends with people who want the best for you.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "분명하고 정확하게 말하라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote:
-      "Compare yourself to who you were yesterday. not to who someone else is today.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "아이들이 스케이트보드를 탈 때 방해하지 말고 내버려 두어라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Do not let your children do anything that makes you dislike them.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "길에서 고양이와 마주치면 쓰다듬어 주어라.",
+    author: "12가지 인생의 법칙, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Set your house in perfect order before you criticize the world.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "기존 제도나 창의적 변화를 함부로 깎아내리지 마라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Pursue what is meaningful (not what is expedient).",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "내가 누구일 수 있는지 상상하고, 그것을 목표로 삼아라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Tell the truth – or, at least, don't lie.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "원치 않는 것을 안개 속에 묻어두지 마라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote:
-      "Assume that the person you are listening to might know something you don't.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "남들이 책임을 방치한 곳에 기회가 숨어 있음을 인식하라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Be precise in your speech.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "하고 싶지 않은 것을 하지 마라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Do not bother children while they are skateboarding.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "이데올로기를 버려라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
   },
   {
-    quote: "Pet a cat when you encounter one in the street.",
-    author: "12 Rules for life, Jordan Peterson (1962 ~)",
+    quote: "최소한 한 가지 일에 최대한 파고들고, 그 결과를 지켜보라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "방 하나를 할 수 있는 한 아름답게 꾸며보라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "여전히 나를 괴롭히는 기억이 있다면 아주 자세하게 글로 써보라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "관계의 낭만을 유지하기 위해 성실히 계획하고 관리하라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "분개하거나 거짓되거나 교만하지 마라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
+  },
+  {
+    quote: "고통스러울지라도 감사하라.",
+    author: "질서 너머, 조던 B. 피터슨 (1962 ~)",
   },
 ]);
 

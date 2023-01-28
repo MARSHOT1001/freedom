@@ -21,12 +21,17 @@
           <form class="fav-form">
             <span>Dev. tools</span>
             <input
-              class="fav__input"
+              class="fav__input-title"
               type="text"
               placeholder="title"
               required
             />
-            <input class="fav__input" type="text" placeholder="url" required />
+            <input
+              class="fav__input-url"
+              type="text"
+              placeholder="url"
+              required
+            />
           </form>
           <div class="folder__content"></div>
         </div>
@@ -34,9 +39,9 @@
           <form class="fav-form">
             <span>Fav.</span>
             <input
-              class="fav__input"
+              class="fav__input-title"
               type="text"
-              placeholder="title"
+              placeholder="title-url"
               required
             />
             <input class="fav__input" type="text" placeholder="url" required />
@@ -87,6 +92,7 @@
         </div>
       </div>
     </main>
+    <script src="js/folders.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/quotes.js"></script>
