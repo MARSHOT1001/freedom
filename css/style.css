@@ -23,41 +23,48 @@ body {
 
 .folder-container {
   display: flex;
-  flex-direction: column;
 }
 
 .folder {
   display: flex;
-  height: 30%;
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
   background-color: grey;
+  height: 80%;
+  width: 80%;
   border-radius: 30px;
-  margin-top: 10px;
-  padding: 10px 0px;
 }
 
 .fav-form {
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.folder__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#marstalk {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30%;
-  width: 100%;
-  border-bottom: 2px solid white;
+  text-decoration: none;
 }
 
-.fav-form input {
-  border: none;
-  outline: none;
-  margin-top: 5px;
-  text-align: center;
-  background: transparent;
+#marstalk .app-icon img {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 10px;
 }
 
-.fav-form input:focus {
-  border-bottom: 1px solid white;
-}
-
-.fav-form input::placeholder {
-  color: white;
+#marstalk .app-icon img:hover {
+  transform: scale(1.2);
 }
