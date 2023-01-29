@@ -1,60 +1,54 @@
-const favForm = document.querySelector(".fav-form");
-const favInputTitle = document.querySelector(".fav__input-title");
-const favInputUrl = document.querySelector(".fav__input-url");
-const folderContent = document.querySelector(".folder__content");
+const favDevForm = document.getElementById("fav-dev-form");
+const favInputDev = document.getElementById("fav__input-dev");
+const folderDevContent = document.getElementById("folder__dev-content");
 
-const FAVS_KEY = "favs";
+const FAV_DEV_KEY = "favdevs";
 
-let favs = [];
+let favDevs = [];
 
-function saveFavs() {
-  localStorage.setItem(FAVS_KEY, JSON.stringify(favs));
+function saveFavDevs() {
+  localStorage.setItem(FAV_DEV_KEY, JSON.stringify(favDevs));
 }
 
-function deleteFav(event) {
-  const li = event.target.parentElement;
-  li.remove();
-  favs = favs.filter((fav) => fav.href !== parseInt(li.href));
-  saveFavs();
+function deleteFavDev(event) {
+  const favDev = event.target.parentElement;
+  favDev.remove();
+  favDevs = favDevs.filter((favDev) => favDev.href !== parseInt(favDev.href));
+  saveFavDevs();
 }
 
-function createFav(newFav) {
-  const fav = document.createElement("li");
-  const anchor = document.createElement("a");
-  // innerText에는 favInputTitle로부터 받은 value를
-  anchor.innerText = newFav.text;
-  // href 에는 favInputUrl로부터 받은 value를
-  anchor.href("#");
-  anchor.href = newFav.href;
-  const button = document.createElement("i");
-  button.classList.add("fas", "fa-times");
-  button.addEventListener("click", deleteFav);
-  fav.appendChild(anchor);
-  fav.appendChild(button);
-  folderContent.appendChild(fav);
+function createFavDev(newFavDev) {
+  const favDev = document.createElement("div");
+  favDev.id = newFavDev.id;
+  const devLink = document.createElement("a");
+  devLink.href = newFavDev.href;
+  const devDelete = document.createElement("i");
+  devDelete.classList.add("fas", "fa-times");
+  devDelete.addEventListener("click", deleteFavDev);
+  favDev.appendChild(devLink);
+  favDev.appendChild(devDelete);
+  folderDevContent.appendChild(favDev);
 }
 
-function handleFavSubmit(event) {
+function handleFavDevSubmit(event) {
   event.preventDefault();
-  const newFavTitle = favInputTitle.value;
-  const newFavUrl = favInputUrl.value;
-  favInputTitle.value = "";
-  favInputUrl.value = "";
-  const newFavObj = {
-    text: newFavTitle,
-    href: newFavUrl,
+  const newFavDev = favInputDev.value;
+  favInputDev.value = "";
+  const newFavDevObj = {
+    href: newFavDev,
+    id: Date.now(),
   };
-  favs.push(newFavObj);
-  createFav(newFavObj);
-  saveFavs();
+  favDevs.push(newFavDevObj);
+  createFavDev(newFavDevObj);
+  saveFavDevs();
 }
 
-favForm.addEventListener("submit", handleFavSubmit);
+favDevForm.addEventListener("submit", handleFavDevSubmit);
 
-const savedFavs = localStorage.getItem(FAVS_KEY);
+const savedFavDevs = localStorage.getItem(FAV_DEV_KEY);
 
-if (savedFavs !== null) {
-  const parsedFavs = JSON.parse(savedFavs);
-  favs = parsedFavs;
-  parsedFavs.forEach(createFav);
+if (savedFavDevs !== null) {
+  const parsedFavDevs = JSON.parse(savedFavDevs);
+  favDevs = parsedFavDevs;
+  parsedFavDevs.forEach(createFavDev);
 }
