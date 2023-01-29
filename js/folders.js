@@ -3,7 +3,20 @@ const favInputTitle = document.querySelector(".fav__input-title");
 const favInputUrl = document.querySelector(".fav__input-url");
 const folderContent = document.querySelector(".folder__content");
 
-favs = [];
+const FAVS_KEY = "favs";
+
+let favs = [];
+
+function saveFavs() {
+  localStorage.setItem(FAVS_KEY, JSON.stringify(favs));
+}
+
+function deleteFav(event) {
+  const li = event.target.parentElement;
+  li.remove();
+  favs = favs.filter((fav) => fav.href !== parseInt(li.href));
+  saveFavs();
+}
 
 function createFav(newFav) {
   const fav = document.createElement("li");
@@ -33,4 +46,15 @@ function handleFavSubmit(event) {
   };
   favs.push(newFavObj);
   createFav(newFavObj);
+  saveFavs();
+}
+
+favForm.addEventListener("submit", handleFavSubmit);
+
+const savedFavs = localStorage.getItem(FAVS_KEY);
+
+if (savedFavs !== null) {
+  const parsedFavs = JSON.parse(savedFavs);
+  favs = parsedFavs;
+  parsedFavs.forEach(createFav);
 }
