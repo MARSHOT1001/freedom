@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const favForm = document.querySelector(".fav-form");
 const favInputTitle = document.querySelector(".fav__input-title");
 const favInputUrl = document.querySelector(".fav__input-url");
@@ -35,5 +34,3 @@ function handleFavSubmit(event) {
   favs.push(newFavObj);
   createFav(newFavObj);
 }
-=======
->>>>>>> d726f9655fcaa06dd727b64a33658bac1de01469
